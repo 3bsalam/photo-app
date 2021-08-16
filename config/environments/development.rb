@@ -9,7 +9,12 @@ Rails.application.configure do
   config.cache_classes = false
 
   # Do not eager load code on boot.
+  
+
   config.eager_load = false
+
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options =  { :host =>'http://127.0.0.1:3000'}
 
   # Show full error reports.
   config.consider_all_requests_local = true
@@ -63,7 +68,7 @@ Rails.application.configure do
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
-
+  
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
